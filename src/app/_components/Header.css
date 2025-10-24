@@ -1,0 +1,27 @@
+.header-container {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .circle {
+  position: absolute;
+  opacity: 0;
+  z-index: 100000;
+  border: 2px solid var(--color);
+  background-color: var(--color);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  width: 300px;
+  height: 300px;
+}
+
+.circle-1 {
+  top: 60%;
+  left: 50%;
+}
+.circle-2 {
+  top: 50%;
+  left: 40%;
+} */

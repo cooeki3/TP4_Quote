@@ -1,0 +1,53 @@
+body {
+  cursor: none;
+}
+
+.cursor-container {
+  position: fixed;
+  z-index: 999999;
+  mix-blend-mode: difference;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cursor-circle,
+.cursor-explosion,
+.cursor-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.cursor-circle {
+  z-index: 2;
+  mix-blend-mode: difference;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #fff;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+}
+
+.cursor-explosion {
+  transform: translate(-50%, -50%) scale(0);
+  /* opacity: 0; */
+  z-index: 1;
+  border-radius: 50%;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.cursor-text {
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  user-select: none;
+}

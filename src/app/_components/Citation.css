@@ -1,0 +1,107 @@
+:root {
+  --noir: #0b0b0b;
+  --blanc: #ffffff;
+  --rouge: #e10600;
+}
+
+.citation-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-weight: 200;
+  font-size: 140px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+/* NE*/
+.text-1 {
+  color: var(--noir);
+  font-size: 400px;
+}
+
+/* CRAIGNEz */
+.text-2 {
+  font-size: 180;
+  color: var(--noir);
+  z-index: 999999;
+}
+
+/* PAS */
+.text-3 {
+  opacity: 0;
+  color: var(--blanc);
+  font-size: 600px;
+  font-weight: 8  00;
+}
+
+/* VOUS NE L’ATTEINDREZ… */
+.text-4 {
+  opacity: 0;
+  color: var(--noir);
+}
+
+/* PAS. — texte rouge */
+.text-5 {
+  opacity: 0;
+  color: var(--rouge);
+}
+
+/* MAIS DANS CET ÉCART — texte noir */
+.text-6 {
+  opacity: 0;
+  color: var(--noir);
+}
+
+/* IMPOSSIBLE — texte noir (gros) */
+.text-7 {
+  opacity: 0;
+  color: var(--noir);
+}
+
+/* SE TROUVE PRÉCISÉMENT — texte noir */
+.text-8 {
+  opacity: 0;
+  color: var(--noir);
+}
+
+/* L’ESPACE OÙ LA — texte noir */
+.text-9 {
+  opacity: 0;
+  color: var(--noir);
+}
+/* TODO */
+
+/* CRÉATIVITÉ — texte blanc */
+.text-10 {
+  opacity: 0;
+  color: var(--blanc);
+}
+
+/* SE — texte blanc */
+.text-11 {
+  opacity: 0;
+  color: var(--blanc);
+}
+
+/* DÉPLOIE — texte blanc */
+.text-12 {
+  opacity: 0;
+  color: var(--blanc);
+}
