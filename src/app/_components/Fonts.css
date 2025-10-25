@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "font1";
+  src: url("../../../public/fonts/Lamoric Rowen TTF.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font2";
+  src: url("../../../public/fonts/OldLondon.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font3";
+  src: url("../../../public/fonts/Spac3 halftone.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font4";
+  src: url("../../../public/fonts/Street Breaker.otf") format("opentype");
+}

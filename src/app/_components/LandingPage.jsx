@@ -35,9 +35,9 @@ const LandingPage = () => {
       charsClass: "name-chars",
     });
 
-    //Load animation
+    // no landing for test
+    /////////////////////////////////////////////////////////
     const tl = gsap.timeline();
-
     tl.set(titleChars.chars, {
       y: "100vh",
     });
@@ -49,39 +49,36 @@ const LandingPage = () => {
     tl.set([flex1Chars.chars, flex2Chars.chars], {
       y: "100%",
     });
-    // tl.set(
-    //   ".circle",
-    //   {
-    //     opacity: 0,
-    //   },
-    //   "<"
-    // );
 
-    tl.to(titleChars.chars, {
-      y: "130%",
-      duration: 1.6,
-      ease: "power4.inOut",
-      //   delay: 0.3,
-      stagger: 0.03,
-    });
+    tl.to(
+      titleChars.chars,
+      {
+        y: "130%",
+        duration: 0,
+        ease: "power4.inOut",
+        //   delay: 0.3,
+        stagger: 0.03,
+      },
+      "<"
+    );
 
     tl.to(
       titleChars.chars,
       {
         y: "0%",
-        duration: 1.8,
+        duration: 0,
         ease: "power4.inOut",
         //   delay: 0.3,
         stagger: 0.03,
       },
-      "-=0.5"
+      "<"
     );
 
     tl.to(
       ".load-animation",
       {
         y: "100%",
-        duration: 1.6,
+        duration: 0,
         ease: "power4.inOut",
       },
       "<"
@@ -91,18 +88,17 @@ const LandingPage = () => {
       ".flex-container-3",
       {
         opacity: 1,
-        duration: 1,
+        duration: 0,
         ease: "power4.out",
       },
-      "-=0.4"
+      "<"
     );
     tl.to(
       flex1Chars.chars,
       {
         y: "0%",
-        duration: 1,
+        duration: 0,
         ease: "power4.out",
-        delay: 0.2,
       },
       "<"
     );
@@ -110,12 +106,86 @@ const LandingPage = () => {
       flex2Chars.chars,
       {
         y: "0%",
-        duration: 1,
+        duration: 0,
         ease: "power4.out",
-        delay: 0.2,
       },
       "<"
     );
+    /////////////////////////////////////////////////////////
+
+    // const tl = gsap.timeline();
+
+    // tl.set(titleChars.chars, {
+    //   y: "100vh",
+    // });
+
+    // tl.set(".load-h1", {
+    //   opacity: 1,
+    // });
+
+    // tl.set([flex1Chars.chars, flex2Chars.chars], {
+    //   y: "100%",
+    // });
+
+    // tl.to(titleChars.chars, {
+    //   y: "130%",
+    //   duration: 1.6,
+    //   ease: "power4.inOut",
+    //   //   delay: 0.3,
+    //   stagger: 0.03,
+    // });
+
+    // tl.to(
+    //   titleChars.chars,
+    //   {
+    //     y: "0%",
+    //     duration: 1.8,
+    //     ease: "power4.inOut",
+    //     //   delay: 0.3,
+    //     stagger: 0.03,
+    //   },
+    //   "-=0.5"
+    // );
+
+    // tl.to(
+    //   ".load-animation",
+    //   {
+    //     y: "100%",
+    //     duration: 1.6,
+    //     ease: "power4.inOut",
+    //   },
+    //   "<"
+    // );
+
+    // tl.to(
+    //   ".flex-container-3",
+    //   {
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power4.out",
+    //   },
+    //   "-=0.4"
+    // );
+    // tl.to(
+    //   flex1Chars.chars,
+    //   {
+    //     y: "0%",
+    //     duration: 1,
+    //     ease: "power4.out",
+    //     delay: 0.2,
+    //   },
+    //   "<"
+    // );
+    // tl.to(
+    //   flex2Chars.chars,
+    //   {
+    //     y: "0%",
+    //     duration: 1,
+    //     ease: "power4.out",
+    //     delay: 0.2,
+    //   },
+    //   "<"
+    // );
   }, []);
 
   return (

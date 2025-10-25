@@ -4,7 +4,8 @@
   --rouge: #e10600;
 }
 
-.citation-container {
+.citation-container,
+.citation-wrap {
   display: flex;
   position: absolute;
   top: 0;
@@ -33,34 +34,47 @@
 /* NE*/
 .text-1 {
   color: var(--noir);
-  font-size: 400px;
+  font-size: 180px;
 }
 
 /* CRAIGNEz */
 .text-2 {
-  font-size: 180;
+  font-size: 180px;
   color: var(--noir);
-  z-index: 999999;
+  white-space: nowrap;
+}
+
+.text-2-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* PAS */
 .text-3 {
   opacity: 0;
-  color: var(--blanc);
-  font-size: 600px;
-  font-weight: 8  00;
+  color: var(--noir);
+  font-size: 180px;
+  /* font-weight: 800; */
+  /* mix-blend-mode: difference; */
 }
 
 /* VOUS NE L’ATTEINDREZ… */
 .text-4 {
+  transform-origin: "50% 50%";
   opacity: 0;
   color: var(--noir);
+  white-space: nowrap;
 }
 
 /* PAS. — texte rouge */
 .text-5 {
   opacity: 0;
-  color: var(--rouge);
+  font-size: 80px;
+  color: var(--noir);
+  white-space: nowrap;
 }
 
 /* MAIS DANS CET ÉCART — texte noir */

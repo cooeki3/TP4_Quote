@@ -22,6 +22,7 @@ import "./_components/Header.css";
 import "./_components/LandingPage.css";
 import "./_components/LightModeToggle.css";
 import "./_components/CustomCursor.css";
+import "./_components/Fonts.css";
 
 gsap.registerPlugin(
   useGSAP,
@@ -117,6 +118,7 @@ export default function Home() {
     tl.current.set(".text-1", {
       opacity: 1,
     });
+
     tl.current.set(
       text1Chars.chars,
       {
@@ -124,14 +126,34 @@ export default function Home() {
       },
       "<"
     );
-
     tl.current.to(
       text1Chars.chars,
       {
         y: "0%",
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.08,
+        duration: 0.9,
+        ease: "elastic.out(1,0.75)",
+        stagger: 0.05,
+      },
+      "<"
+    );
+
+    tl.current.to(
+      ".text-1",
+      {
+        duration: 0.6,
+        ease: "power2.inOut",
+        scale: 0.5,
+      },
+      ">-0.8"
+    );
+
+    tl.current.to(
+      ".citation-wrap",
+      {
+        duration: 0.7,
+        ease: "power2.inOut",
+        x: -350,
+        delay: 0.35,
       },
       "<"
     );
@@ -140,34 +162,148 @@ export default function Home() {
       ".text-2",
       {
         opacity: 1,
+        scale: 0.5,
+        x: "43%",
+        delay: 0.4,
       },
-      "<1"
+      "<0.1"
     );
 
-    tl.current.set(
-      ".text-1",
-      {
-        opacity: 0,
-      },
-      "<"
-    );
-
-    tl.current.set(".text-3", {
-      opacity: 1,
-      delay: 0.6,
-    });
-
-    tl.current.set(".citation-container", {
-      backgroundColor: "red",
-    });
-
-    tl.current.set(
+    tl.current.to(
       ".text-2",
       {
-        opacity: 0,
+        x: "35%",
+        duration: 0.6,
+        ease: "power2.out",
       },
       "<"
     );
+
+    tl.current.set(
+      ".text-3",
+      {
+        opacity: 1,
+        scale: 0.5,
+        x: "153%",
+      },
+      ">-0.3"
+    );
+
+    tl.current.to(
+      ".text-3",
+      {
+        x: "145%",
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "<"
+    );
+
+    tl.current.to(
+      ".citation-wrap",
+      {
+        x: -500,
+        duration: 0.3,
+        ease: "power2.in",
+      },
+      ">-0.3"
+    );
+
+    tl.current.set(
+      ".text-1, .text-2, .text-3",
+      {
+        opacity: 0,
+      },
+      ">"
+    );
+
+    tl.current.set(
+      ".text-4",
+      {
+        opacity: 1,
+      },
+      "<"
+    );
+
+    tl.current.set(".citation-wrap", {
+      x: 60,
+    });
+
+    tl.current.to(".citation-wrap", {
+      x: 0,
+      ease: "power2.out",
+      duration: 0.5,
+    });
+
+    tl.current.set(
+      ".citation-container",
+      {
+        backgroundColor: "#7a58f5",
+      },
+      ">"
+    );
+
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "font1",
+        scale: 0.4,
+        left: "1050px",
+      },
+      "<"
+    );
+
+    tl.current.set(".citation-container", {
+      backgroundColor: "#f352b5ff",
+      delay: 0.2,
+    });
+
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "font3",
+        scale: 1.2,
+        left: "800px",
+      },
+      "<"
+    );
+
+    tl.current.set(".citation-container", {
+      backgroundColor: "#52f39aff",
+      delay: 0.2,
+    });
+
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "font4",
+        scale: 1.6,
+        left: "1000px",
+      },
+      "<"
+    );
+
+    tl.current.set(".citation-container", {
+      backgroundColor: "#fff",
+      delay: 0.2,
+    });
+
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "normal",
+        scale: 1.4,
+        left: "1000px",
+      },
+      "<"
+    );
+
+    tl.current.set(".text-4", {
+      opacity: 0,
+    });
+        tl.current.set(".text-5", {
+      opacity: 1,
+    });
 
     GSDevTools.create({ animation: tl.current });
 
