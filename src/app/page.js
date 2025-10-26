@@ -58,6 +58,23 @@ export default function Home() {
       charsClass: "mask-chars",
     });
 
+    const text5Words = SplitText.create(text5Ref.current, {
+      type: "words",
+      // mask: "words",
+      wordsClass: "mask-words",
+    });
+
+    const text6Chars = SplitText.create(text6Ref.current, {
+      type: "chars",
+      mask: "chars",
+      charsClass: "mask-chars",
+    });
+    const text7Words = SplitText.create(text7Ref.current, {
+      type: "words",
+      // mask: "words",
+      wordsClass: "mask-words",
+    });
+
     window.scrollTo(0, 0);
     document.title = "WEB 5 - TP3";
     document.querySelector("link[rel='icon']").href = "/favicon.ico";
@@ -110,13 +127,20 @@ export default function Home() {
     tl.current.set(
       ".citation-container",
       {
-        backgroundColor: "white",
+        backgroundColor: "var(--color)",
       },
       "<"
     );
 
     tl.current.set(".text-1", {
       opacity: 1,
+    });
+
+    tl.current.set(text7Words.words, {
+      left: 2200,
+      opacity: 0,
+      scale: 0.8,
+      marginRight: "200px",
     });
 
     tl.current.set(
@@ -236,27 +260,15 @@ export default function Home() {
     });
 
     tl.current.set(
-      ".citation-container",
-      {
-        backgroundColor: "#7a58f5",
-      },
-      ">"
-    );
-
-    tl.current.set(
       ".text-4",
       {
         fontFamily: "font1",
-        scale: 0.4,
+        scale: 0.8,
         left: "1050px",
+        delay: 0.2,
       },
       "<"
     );
-
-    tl.current.set(".citation-container", {
-      backgroundColor: "#f352b5ff",
-      delay: 0.2,
-    });
 
     tl.current.set(
       ".text-4",
@@ -264,14 +276,10 @@ export default function Home() {
         fontFamily: "font3",
         scale: 1.2,
         left: "800px",
+        delay: 0.2,
       },
       "<"
     );
-
-    tl.current.set(".citation-container", {
-      backgroundColor: "#52f39aff",
-      delay: 0.2,
-    });
 
     tl.current.set(
       ".text-4",
@@ -279,31 +287,206 @@ export default function Home() {
         fontFamily: "font4",
         scale: 1.6,
         left: "1000px",
+        delay: 0.2,
+      },
+      "<"
+    );
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "font5",
+        scale: 1.4,
+        left: "900px",
+        delay: 0.2,
       },
       "<"
     );
 
-    tl.current.set(".citation-container", {
-      backgroundColor: "#fff",
-      delay: 0.2,
-    });
+    tl.current.set(
+      ".text-4",
+      {
+        fontFamily: "font6",
+        scale: 1.4,
+        left: "950px",
+        delay: 0.2,
+      },
+      "<"
+    );
 
     tl.current.set(
       ".text-4",
       {
-        fontFamily: "normal",
-        scale: 1.4,
+        fontFamily: "Arial",
+        scale: 1,
         left: "1000px",
+        delay: 0.2,
       },
       "<"
+    );
+
+    tl.current.to(
+      ".text-4",
+      {
+        scale: 0.8,
+        duration: 0.4,
+        ease: "power3.in",
+        force3D: true,
+        delay: 0.4,
+      },
+      "<-0.3"
     );
 
     tl.current.set(".text-4", {
       opacity: 0,
     });
-        tl.current.set(".text-5", {
+
+    tl.current.set(".citation-wrap", {
+      scale: 0.7,
+    });
+
+    tl.current.set(".text-5", {
       opacity: 1,
     });
+
+    tl.current.set(text5Words.words, {
+      y: 800,
+    });
+
+    tl.current.to(text5Words.words, {
+      y: 0,
+      ease: "power2.out",
+      duration: 1,
+      force3D: true,
+      stagger: 0.08,
+    });
+
+    tl.current.to(
+      ".citation-wrap",
+      {
+        duration: 0.8,
+        ease: "power2.inOut",
+        scale: 1.5,
+      },
+      "<0.5"
+    );
+
+    tl.current.to(
+      ".citation-wrap",
+      {
+        y: -800,
+        ease: "power3.inOut",
+        duration: 2.2,
+      },
+      "<"
+    );
+
+    tl.current.set(
+      ".text-6",
+      {
+        opacity: 1,
+        y: 500,
+      },
+      "<0.4"
+    );
+
+    tl.current.set(
+      ".text-6",
+      {
+        opacity: 1,
+        y: 500,
+      },
+      "<"
+    );
+
+    tl.current.to(
+      ".text-6",
+      {
+        scale: 55,
+        rotation: 180,
+        duration: 1.5,
+        ease: "power4.inOut",
+      },
+      "<1.1"
+    );
+
+    tl.current.set(".text-6", {
+      opacity: 0,
+    });
+
+    tl.current.set(".text-5", {
+      opacity: 0,
+    });
+
+    tl.current.set(".citation-wrap", {
+      x: 0,
+      y: 0,
+      scale: 1,
+    });
+
+    tl.current.set(".citation-wrap", {
+      left: "200px",
+      duration: 5,
+      ease: "none",
+    });
+
+    tl.current.set(text7Words.words[0], {
+      opacity: 1,
+    });
+
+    tl.current.to(text7Words.words, {
+      scale: 1.1,
+      duration: 0.9,
+      ease: "power4.out",
+    });
+
+    tl.current.to(
+      ".citation-wrap",
+      {
+        left: -1400,
+        duration: 1.2,
+        ease: "power4.inOut",
+      },
+      "<0.2"
+    );
+
+    tl.current.set(
+      text7Words.words[1],
+      {
+        opacity: 1,
+        x: "25%",
+      },
+      "<0.5"
+    );
+
+    tl.current.to(
+      text7Words.words[1],
+      {
+        x: "0%",
+        duration: 1.5,
+        ease: "power4.out",
+      },
+      "<"
+    );
+
+    // tl.current.set(text6Chars.chars, {
+    //   y: "-100%",
+    // });
+
+    // tl.current.to(".citation-wrap", {
+    //   duration: 0.9,
+    //   ease: "power2.inOut",
+    //   y: -200,
+    // });
+
+    // tl.current.to(
+    //   text6Chars.chars,
+    //   {
+    //     duration: 0.9,
+    //     ease: "power2.inOut",
+    //     y: "0%",
+    //   },
+    //   "<"
+    // );
 
     GSDevTools.create({ animation: tl.current });
 

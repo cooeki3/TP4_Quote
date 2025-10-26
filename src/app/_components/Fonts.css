@@ -17,3 +17,12 @@
   font-family: "font4";
   src: url("../../../public/fonts/Street Breaker.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "font5";
+  src: url("../../../public/fonts/MagazineLetterByBrntlbrnl-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "font6";
+  src: url("../../../public/fonts/JMH Typewriter-Black.ttf") format("opentype");
+}

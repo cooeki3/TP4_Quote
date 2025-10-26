@@ -42,7 +42,7 @@ const Citation = ({
           vous ne l'atteindrez
         </div>
         <div className="text text-6" ref={text6Ref}>
-          pas.
+          pas
         </div>
         <div className="text text-7" ref={text7Ref}>
           Mais dans cet écart
@@ -66,7 +66,7 @@ const Citation = ({
           déploie
         </div>
       </div>
-    </div>  
+    </div>
   );
 };
 export default Citation;

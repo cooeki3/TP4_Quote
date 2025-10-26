@@ -1,9 +1,3 @@
-:root {
-  --noir: #0b0b0b;
-  --blanc: #ffffff;
-  --rouge: #e10600;
-}
-
 .citation-container,
 .citation-wrap {
   display: flex;
@@ -15,6 +9,7 @@
   background: transparent;
   width: 100vw;
   height: 100vh;
+  color: var(--color);
 }
 
 .text {
@@ -28,20 +23,21 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  opacity: 0;
 }
 
 /* NE*/
 .text-1 {
-  color: var(--noir);
+  color: var(--background);
   font-size: 180px;
+  opacity: 0;
 }
 
 /* CRAIGNEz */
 .text-2 {
   font-size: 180px;
-  color: var(--noir);
+  color: var(--background);
   white-space: nowrap;
+  opacity: 0;
 }
 
 .text-2-container {
@@ -55,7 +51,7 @@
 /* PAS */
 .text-3 {
   opacity: 0;
-  color: var(--noir);
+  color: var(--background);
   font-size: 180px;
   /* font-weight: 800; */
   /* mix-blend-mode: difference; */
@@ -65,7 +61,7 @@
 .text-4 {
   transform-origin: "50% 50%";
   opacity: 0;
-  color: var(--noir);
+  color: var(--background);
   white-space: nowrap;
 }
 
@@ -73,32 +69,34 @@
 .text-5 {
   opacity: 0;
   font-size: 80px;
-  color: var(--noir);
+  color: var(--background);
   white-space: nowrap;
 }
 
 /* MAIS DANS CET ÉCART — texte noir */
 .text-6 {
   opacity: 0;
-  color: var(--noir);
+  color: var(--background);
+  font-size: 180px;
 }
 
 /* IMPOSSIBLE — texte noir (gros) */
 .text-7 {
-  opacity: 0;
-  color: var(--noir);
+  color: var(--background);
+  font-size: 400px;
+  white-space: nowrap;
 }
 
 /* SE TROUVE PRÉCISÉMENT — texte noir */
 .text-8 {
   opacity: 0;
-  color: var(--noir);
+  color: var(--background);
 }
 
 /* L’ESPACE OÙ LA — texte noir */
 .text-9 {
   opacity: 0;
-  color: var(--noir);
+  color: var(--background);
 }
 /* TODO */
 
@@ -116,6 +114,11 @@
 
 /* DÉPLOIE — texte blanc */
 .text-12 {
+  opacity: 0;
+  color: var(--blanc);
+}
+
+.text-13 {
   opacity: 0;
   color: var(--blanc);
 }
