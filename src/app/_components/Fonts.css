@@ -22,7 +22,13 @@
   font-family: "font5";
   src: url("../../../public/fonts/MagazineLetterByBrntlbrnl-Regular.ttf") format("opentype");
 }
+
 @font-face {
   font-family: "font6";
   src: url("../../../public/fonts/JMH Typewriter-Black.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "font7";
+  src: url("../../../public/fonts/CreatoDisplay-Regular.otf") format("opentype");
 }

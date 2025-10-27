@@ -1,15 +1,13 @@
 "use client";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRouter } from "next/navigation";
 import { SplitText } from "gsap/SplitText";
 import { GSDevTools } from "gsap/GSDevTools";
 import { CustomEase } from "gsap/CustomEase";
 import { useRef } from "react";
-import { useEffect } from "react";
-import buttonRef from "./LightModeToggle.jsx";
+
+import "./Fonts.css";
 gsap.registerPlugin(useGSAP, SplitText, GSDevTools, CustomEase);
-//Refs
 
 const LandingPage = () => {
   const titleRef = useRef();
@@ -17,7 +15,6 @@ const LandingPage = () => {
   const flex2Ref = useRef();
 
   useGSAP(() => {
-    //refs
     const titleChars = SplitText.create(titleRef.current, {
       type: "chars",
       charsClass: "title-chars",
@@ -35,9 +32,8 @@ const LandingPage = () => {
       charsClass: "name-chars",
     });
 
-    // no landing for test
-    /////////////////////////////////////////////////////////
     const tl = gsap.timeline();
+
     tl.set(titleChars.chars, {
       y: "100vh",
     });
@@ -50,35 +46,31 @@ const LandingPage = () => {
       y: "100%",
     });
 
-    tl.to(
-      titleChars.chars,
-      {
-        y: "130%",
-        duration: 0,
-        ease: "power4.inOut",
-        //   delay: 0.3,
-        stagger: 0.03,
-      },
-      "<"
-    );
+    tl.to(titleChars.chars, {
+      y: "110%",
+      duration: 1.6,
+      ease: "power4.inOut",
+
+      stagger: 0.03,
+    });
 
     tl.to(
       titleChars.chars,
       {
         y: "0%",
-        duration: 0,
+        duration: 1.8,
         ease: "power4.inOut",
-        //   delay: 0.3,
+
         stagger: 0.03,
       },
-      "<"
+      "-=0.5"
     );
 
     tl.to(
       ".load-animation",
       {
         y: "100%",
-        duration: 0,
+        duration: 1.6,
         ease: "power4.inOut",
       },
       "<"
@@ -88,17 +80,18 @@ const LandingPage = () => {
       ".flex-container-3",
       {
         opacity: 1,
-        duration: 0,
+        duration: 1,
         ease: "power4.out",
       },
-      "<"
+      "-=0.4"
     );
     tl.to(
       flex1Chars.chars,
       {
         y: "0%",
-        duration: 0,
+        duration: 1,
         ease: "power4.out",
+        delay: 0.2,
       },
       "<"
     );
@@ -106,86 +99,12 @@ const LandingPage = () => {
       flex2Chars.chars,
       {
         y: "0%",
-        duration: 0,
+        duration: 1,
         ease: "power4.out",
+        delay: 0.2,
       },
       "<"
     );
-    /////////////////////////////////////////////////////////
-
-    // const tl = gsap.timeline();
-
-    // tl.set(titleChars.chars, {
-    //   y: "100vh",
-    // });
-
-    // tl.set(".load-h1", {
-    //   opacity: 1,
-    // });
-
-    // tl.set([flex1Chars.chars, flex2Chars.chars], {
-    //   y: "100%",
-    // });
-
-    // tl.to(titleChars.chars, {
-    //   y: "130%",
-    //   duration: 1.6,
-    //   ease: "power4.inOut",
-    //   //   delay: 0.3,
-    //   stagger: 0.03,
-    // });
-
-    // tl.to(
-    //   titleChars.chars,
-    //   {
-    //     y: "0%",
-    //     duration: 1.8,
-    //     ease: "power4.inOut",
-    //     //   delay: 0.3,
-    //     stagger: 0.03,
-    //   },
-    //   "-=0.5"
-    // );
-
-    // tl.to(
-    //   ".load-animation",
-    //   {
-    //     y: "100%",
-    //     duration: 1.6,
-    //     ease: "power4.inOut",
-    //   },
-    //   "<"
-    // );
-
-    // tl.to(
-    //   ".flex-container-3",
-    //   {
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power4.out",
-    //   },
-    //   "-=0.4"
-    // );
-    // tl.to(
-    //   flex1Chars.chars,
-    //   {
-    //     y: "0%",
-    //     duration: 1,
-    //     ease: "power4.out",
-    //     delay: 0.2,
-    //   },
-    //   "<"
-    // );
-    // tl.to(
-    //   flex2Chars.chars,
-    //   {
-    //     y: "0%",
-    //     duration: 1,
-    //     ease: "power4.out",
-    //     delay: 0.2,
-    //   },
-    //   "<"
-    // );
   }, []);
 
   return (

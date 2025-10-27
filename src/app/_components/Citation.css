@@ -10,6 +10,8 @@
   width: 100vw;
   height: 100vh;
   color: var(--color);
+  z-index: 2;
+  height: 100vh;
 }
 
 .text {
@@ -17,47 +19,41 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none;
   font-weight: 200;
   font-size: 140px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  font-family: "font7";
 }
 
-/* NE*/
 .text-1 {
+  opacity: 0;
   color: var(--background);
   font-size: 180px;
-  opacity: 0;
 }
 
-/* CRAIGNEz */
 .text-2 {
-  font-size: 180px;
-  color: var(--background);
-  white-space: nowrap;
   opacity: 0;
+  color: var(--background);
+  font-size: 180px;
+  white-space: nowrap;
 }
 
 .text-2-container {
-  width: 100vw;
-  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* PAS */
 .text-3 {
   opacity: 0;
   color: var(--background);
   font-size: 180px;
-  /* font-weight: 800; */
-  /* mix-blend-mode: difference; */
 }
 
-/* VOUS NE L’ATTEINDREZ… */
 .text-4 {
   transform-origin: "50% 50%";
   opacity: 0;
@@ -65,60 +61,148 @@
   white-space: nowrap;
 }
 
-/* PAS. — texte rouge */
 .text-5 {
   opacity: 0;
+  color: var(--color);
   font-size: 80px;
-  color: var(--background);
   white-space: nowrap;
 }
 
-/* MAIS DANS CET ÉCART — texte noir */
 .text-6 {
   opacity: 0;
-  color: var(--background);
+  color: var(--color);
   font-size: 180px;
 }
 
-/* IMPOSSIBLE — texte noir (gros) */
 .text-7 {
-  color: var(--background);
+  opacity: 0;
+  color: var(--color);
   font-size: 400px;
   white-space: nowrap;
 }
 
-/* SE TROUVE PRÉCISÉMENT — texte noir */
 .text-8 {
   opacity: 0;
-  color: var(--background);
+  color: var(--color);
+  font-size: 50px;
+  white-space: nowrap;
 }
 
-/* L’ESPACE OÙ LA — texte noir */
 .text-9 {
   opacity: 0;
+  width: 100%;
   color: var(--background);
+  font-weight: 800;
+  font-size: 20.5vw;
+  letter-spacing: -25px;
+  text-transform: uppercase;
 }
-/* TODO */
 
-/* CRÉATIVITÉ — texte blanc */
+.text-9-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+  width: 100vw;
+  height: 50vh;
+}
+
+.text-9-1 {
+  position: absolute;
+  top: 0;
+}
+
+.text-9-3 {
+  margin-right: 30px;
+  text-align: right;
+}
+
+.text-9-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
 .text-10 {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  transform: translate(-50%, -50%) scaleY(2);
+  transform: scaleY(2);
   opacity: 0;
-  color: var(--blanc);
+  z-index: 2;
+  color: var(--background);
+  font-weight: 800;
+  font-size: 281px;
 }
 
-/* SE — texte blanc */
 .text-11 {
   opacity: 0;
-  color: var(--blanc);
+  color: var(--color);
+  font-weight: 100;
+  font-size: 40px;
+  white-space: nowrap;
 }
 
-/* DÉPLOIE — texte blanc */
-.text-12 {
+.project-thumbnail {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  color: var(--blanc);
+  padding: 30px;
+
+  img,
+  video {
+    width: 400px;
+    height: 225px;
+    object-fit: cover;
+    object-position: left top;
+    transition: all 0.7s ease;
+  }
+
+  &:hover img,
+  &:hover video {
+    transform: scale(1.1);
+    filter: blur(3px) brightness(0.4);
+  }
+
+  &:hover .project-thumbnail-text {
+    display: flex;
+  }
+
+  .project-thumbnail-text {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "font7";
+    letter-spacing: 2px;
+  }
 }
 
-.text-13 {
-  opacity: 0;
-  color: var(--blanc);
+.thumbnail-img-container {
+  width: 350px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.projects-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
 }

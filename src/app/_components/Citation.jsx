@@ -1,9 +1,5 @@
 "use client";
-import gsap from "gsap";
-import { useEffect } from "react";
-import { useRef } from "react";
-import CustomCursor from "../_components/CustomCursor";
-import "../_components/CustomCursor.css";
+import Link from "next/link";
 import "../_components/Citation.css";
 
 const Citation = ({
@@ -18,11 +14,10 @@ const Citation = ({
   text9Ref,
   text10Ref,
   text11Ref,
-  text12Ref,
-  text13Ref,
+  projects,
 }) => {
   return (
-    <div className="citation-container">
+    <div className="citation-container button">
       <div className="citation-wrap">
         <div className="text text-1" ref={text1Ref}>
           Ne
@@ -45,25 +40,53 @@ const Citation = ({
           pas
         </div>
         <div className="text text-7" ref={text7Ref}>
-          Mais dans cet écart
+          Mais dans cet écart impossible
         </div>
         <div className="text text-8" ref={text8Ref}>
-          impossible
-        </div>
-        <div className="text text-9" ref={text9Ref}>
           se trouve précisément
         </div>
-        <div className="text text-10" ref={text10Ref}>
-          l'espace où la
+
+        <div className="text-9-wrap">
+          <div className="text-9 text-9-1" ref={text9Ref}>
+            l'espace
+          </div>
+          <div className="text-9-container">
+            <div className="text-9 text-9-2" ref={text9Ref}>
+              où
+            </div>
+            <div className="text-9 text-9-3" ref={text9Ref}>
+              la
+            </div>
+          </div>
         </div>
-        <div className="text text-11" ref={text11Ref}>
+        <div className="text text-10" ref={text10Ref}>
           créativité
         </div>
-        <div className="text text-12" ref={text12Ref}>
-          se
+
+        <div className="text text-11" ref={text11Ref}>
+          se déploie
         </div>
-        <div className="text text-13" ref={text13Ref}>
-          déploie
+        <div className="projects-container">
+          {projects.map(({ title, id, slug }) => {
+            return (
+              <Link href={"/project/" + slug} key={id}>
+                <div className="project-thumbnail-wrapper">
+                  <div
+                    className={"project-thumbnail project-thumbnail-" + slug}
+                  >
+                    <div className="thumbnail-img-container">
+                      <img
+                        className={"projects-img-" + slug}
+                        src={"/img/project_" + slug + ".jpg"}
+                        alt={"Photo de " + slug}
+                      />
+                    </div>
+                    <div className="project-thumbnail-text">{title}</div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

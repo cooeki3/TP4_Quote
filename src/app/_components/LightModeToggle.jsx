@@ -1,4 +1,3 @@
-// LightModeButton.jsx
 "use client";
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -11,7 +10,6 @@ const LightModeToggle = () => {
   var buttonRef = useRef();
   var iconRef = useRef();
 
-  // Hover aniamtion (Light/Dark mode icon)
   useGSAP(
     () => {
       function iconAnimationIn() {
@@ -37,7 +35,6 @@ const LightModeToggle = () => {
     { dependencies: [] }
   );
 
-  //Light/Dark Mode Change
   useEffect(
     function () {
       var root = document.documentElement;
@@ -56,12 +53,12 @@ const LightModeToggle = () => {
       <button
         ref={buttonRef}
         type="button"
-        className="lightmode-button"
+        className="lightmode-button button"
         onClick={onClick}
       >
         <span
           ref={iconRef}
-          className="material-symbols-outlined lightmode-icon"
+          className="material-symbols-outlined lightmode-icon button"
         >
           {dark ? "light_mode" : "dark_mode"}
         </span>

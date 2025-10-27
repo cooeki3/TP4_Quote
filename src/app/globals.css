@@ -6,8 +6,6 @@
 html,
 body {
   max-width: 100vw;
-  height: 300vh;
-  overflow: hidden;
 }
 
 body {
@@ -27,10 +25,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.page {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }

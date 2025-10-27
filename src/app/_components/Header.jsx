@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { SplitText } from "gsap/SplitText";
 import { GSDevTools } from "gsap/GSDevTools";
 import { CustomEase } from "gsap/CustomEase";
-import { useRef, useState } from "react";
-import { useEffect } from "react";
 gsap.registerPlugin(useGSAP, SplitText, GSDevTools, CustomEase);
 
 const Header = () => {
